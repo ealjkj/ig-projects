@@ -1,0 +1,80 @@
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Setup */
+html, body {
+    height: 100%;
+    color: white;
+    font-family: Helvetica, sans-serif;
+}
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ----------- Header -----------*/
+header {
+    padding-left: 10em;
+    padding-top: 3em;
+    background-color: #001219;
+}
+
+ul {
+    text-align: end;
+    padding-right: 20rem;
+}
+
+li {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+    margin-right:1em;
+    margin-bottom: 1em;
+    border-radius: 3px;
+}   
+/* ----------- Main -----------*/
+main {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.content1, .content2, .side {
+    /* width: 33.33%; */
+}
+
+.content1 {
+    background-color: #0A9396;
+    width: 40%;
+}
+
+.content2 {
+    background-color: #E9D8A6;
+    width: 40%;
+}
+
+.side {
+    background-color: #CA6702;
+    width: 20%;
+}
+/* ----------- Footer -----------*/
+footer {
+    background-color: #9B2226;
+    height: 200px;
+    min-height: 200px;
+    color: white;
+    font-size: 2em;
+}
+
+footer  p {
+    margin: 1em;
+}

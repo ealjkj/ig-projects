@@ -1,0 +1,77 @@
+/* Solution is below at the end*/
+/* Styling ----------------------------------------*/
+* {
+    box-sizing: border-box;
+}
+:root {
+    --secundary-color: #ffb703;
+    --title-color: #2d3142;
+    --subtitle-color: #2d3142;
+}
+
+
+/* General styles */
+body {
+    background-color: #bfc0c0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+
+h2, h1 {
+    padding: 10px;
+    color: var(--title-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    color: var(--subtitle-color);
+    font-size: 40px;
+    padding-top: 40px;
+    padding-left: 30px;
+}
+img {
+    padding-left: 30px;
+}
+p {
+    padding-left: 30px;
+    font-size: 22px;
+}
+
+header h1{
+    font-size: 60px;    
+}
+
+header:not(first-child){
+    font-size: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    height: 700px;
+}
+.review-container {
+    margin: 100px;
+    padding-bottom: 100px;
+}
+
+
+/*  ----------------------------------------
+--------- Solution ------------
+-------------------------------------------*/
+.word {
+    /* letter-spacing: -10px; */
+    padding-left: 10rem;
+    font-size: 3rem;
+    color: var(--secundary-color);
+    cursor: pointer;
+}
+
+.letter {
+    /* margin: -5px; */
+    /* background-color: #bfc0c0;    */
+}
+
+.letter:hover {
+    /* display: none;    */
+    /* visibility: collapse; */
+    color: transparent;
+}

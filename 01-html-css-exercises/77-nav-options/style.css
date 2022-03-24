@@ -1,0 +1,218 @@
+/* Solution is below at the end*/
+/* Styling ----------------------------------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+:root {
+    --secundary-color: #ffb703;
+    --title-color: #2d3142;
+    --subtitle-color: #2d3142;
+}
+
+
+/* General styles */
+body {
+    background-color: #bfc0c0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+
+h2, h1 {
+    padding: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    color: var(--subtitle-color);
+    font-size: 40px;
+    padding-top: 40px;
+    padding-left: 30px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+ul {
+    padding: 0;
+}
+li {
+    list-style-type: none;
+    border: 1px solid black;
+    margin: 0;
+}
+main {
+    background-color: var(--subtitle-color);
+    width: 100%;
+}
+
+p {
+    color: white;
+}
+
+
+/* Ckeckbox */
+.fa {
+    color: white;
+    line-height: 16px;
+    border-radius: 4px;
+  }
+  .drop-menu-checkbox {
+      display: none;
+  }
+  .fa-plus {
+    padding-top: 2px;
+    padding-right: 2px;
+    padding-left: 2px;
+    background-color: #2d3142;
+    position: absolute;
+    top: 5vh;
+    right: 0;
+    cursor: pointer;
+  }
+  .fa-minus {
+    padding-top: 1px;
+    padding-right: 2px;
+    padding-left: 2px;
+    background-color: #E85764;
+    display: none;
+    position: absolute;
+    top: 5vh;
+    right: 0;
+    cursor: pointer;
+  }
+
+  .drop-menu-checkbox:checked + .checkbox-label .fa-minus {
+    display: inline;
+  }
+  .drop-menu-checkbox:checked + .checkbox-label .fa-plus {
+    display: none;
+  }
+
+  .option li:hover {
+    transition:all ease-in-out 0.2s;
+}
+  .option li:hover {
+       opacity: 50%;
+  }
+
+/* Solution -------------------------------------*/
+
+/* General styling*/
+.menu {
+    background-color: #dbc442;
+}
+.layout-box {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2d3142;
+}
+.menu li {
+    cursor: pointer;
+}
+
+.menu .option .option-title,
+.menu .option li {
+    min-height: 10vh;
+}
+
+.option {
+    position: relative;
+}
+.drop-menu-checkbox {
+    position: absolute;
+    right: 0;
+    top: 5vh;
+}
+
+
+/* Dropdown menu*/
+.option ul {
+    display: none;
+}
+
+.drop-menu-checkbox:checked ~ ul
+{   
+    display: block;
+}
+
+.option li {
+    background-color: #a79321;
+}
+
+.layout-box .menu {
+    width: 15vw;
+    height: 100vh;
+}
+.layout-box{
+    display: flex;
+}
+
+/*Left --------------------------------*/
+#display-left-nav:target ~ .layout-box .menu {
+    width: 15vw;
+    height: 100vh;
+}
+#display-left-nav:target ~ .layout-box{
+    display: flex;
+}
+/*Center --------------------------------*/
+#display-center-nav:target ~ .layout-box .menu > ul {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    /* gap: 1rem; */
+}
+
+#display-center-nav:target ~ .layout-box .menu > ul .multiple-displays {
+    order: -1;
+    margin-right: 30vh;
+}
+
+#display-center-nav:target ~ .layout-box .menu .option > ul {
+    position: absolute;
+}
+
+#display-center-nav:target ~ .layout-box .menu ul li {
+    width: 10vw;
+}
+
+#display-center-nav:target ~ .layout-box .menu{
+    width: 100vw;
+    height: auto;
+}
+#display-center-nav:target ~ .layout-box{
+    display: block;
+}
+/* 
+#display-center-nav:target ~ .layout-box .option ul li:not(:nth-child(1)) {
+    float: left;
+    position:absolute;
+} 
+#display-center-nav:target ~ .layout-box .option ul:first-child {
+    background-color: #bfc0c0;
+}  */
+
+
+/*Right --------------------------------*/
+
+#display-right-nav:target ~ .layout-box .menu {
+    width: 15vw;
+    height: 100vh;
+}
+#display-right-nav:target ~ .layout-box{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+
+
+main .multiple-displays {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}

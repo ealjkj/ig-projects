@@ -1,0 +1,62 @@
+/* Solution is below at the end*/
+/* Styling ----------------------------------------*/
+:root {
+    --secundary-color: #ffb703;
+    --title-color: #2d3142;
+    --subtitle-color: #2d3142;
+}
+
+
+/* General styles */
+body {
+    background-color: #bfc0c0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+
+h2, h1 {
+    padding: 10px;
+    color: var(--title-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    color: var(--subtitle-color);
+    font-size: 40px;
+    padding-top: 40px;
+    padding-left: 30px;
+}
+img {
+    padding-left: 30px;
+}
+p {
+    padding-left: 30px;
+    font-size: 22px;
+}
+
+header h1{
+    font-size: 60px;    
+}
+
+
+
+/* Solution -----------------------------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+.container {
+    display: flex;
+}
+.container .child {
+    width: 50%;
+    height: 80vh;
+    padding: 4rem;
+    margin:3rem;
+}
+.container .child:nth-child(1) {
+    background-color: var(--subtitle-color);
+}
+
+.container .child:nth-child(2) {
+    background-color: var(--secundary-color);
+}

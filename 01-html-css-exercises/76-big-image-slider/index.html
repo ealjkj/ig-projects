@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9c9b66e460.js" crossorigin="anonymous"></script>
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1 class="main-title"> Image slider (Question 73).</h1>
+        <p>Create an image slider with the following markup:</p>
+        <img src="exercise-img.PNG" alt="markup to make. Unordered list with three elements inside a div with id of carousel.">
+        <ol>
+            <li>Must have 500x300 dimensions</li>
+            <li>Only show one slide at a time</li>
+            <li>Create a transition animation</li>
+        </ol>
+    </header>
+    <main class="container">
+        <div class="first-solution">
+            <h2> Solution </h2>
+            <div class="solution-description">
+                <p> <strong>Description:</strong> The first li element is going to the right. Then it goes under the ul element, in order to come back to the left without showing up in the slider (turn  off the <strong> overflow: hidden </strong> to see what's happening). Maybe we could have used the index-z for better performance. </p>
+                <p>
+                   We select the li elements with the :nth-child selector. And we need to position the li with the absoulte position and the #carousel being relative positioned.
+                </p>
+                <p><strong>Notes:</strong> Page is not responsive. We could get this in a better way modifying the markup or using javascript. </p> 
+            </div>
+
+            <div id="carousel">
+                <ul>
+                    <li>Slide1</li>
+                    <li>Slide2</li>
+                    <li>Slide3</li>
+                    <li>Slide4</li>
+                    <li>Slide5</li>
+                    <li>Slide6</li>
+                    <li>Slide7</li>
+                    <li>Slide8</li>
+                    <li>Slide9</li>
+                    <li>Slide10</li>
+                    <li>Slide11</li>
+                    <li>Slide12</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>

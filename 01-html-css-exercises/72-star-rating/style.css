@@ -1,0 +1,110 @@
+/* Solution is below at the end*/
+/* Styling ----------------------------------------*/
+* {
+    box-sizing: border-box;
+}
+:root {
+    --star-color: #ffb703;
+    --title-color: #2d3142;
+    --subtitle-color: #2d3142;
+}
+
+
+/* General styles */
+body {
+    background-color: #bfc0c0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+
+h2, h1 {
+    padding: 10px;
+    color: var(--title-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    color: var(--subtitle-color);
+    font-size: 40px;
+    padding-top: 40px;
+    padding-left: 30px;
+}
+p {
+    padding-left: 30px;
+    font-size: 22px;
+}
+
+
+
+/*  ----------------------------------------
+--------- Solution ------------
+-------------------------------------------*/
+
+.container {
+    width: 40%;
+    padding-bottom: 10%;
+    background: transparent url(five-star-sprite.png);
+    background-size: 100% 200%;
+    background-position-y: -105%;
+    position: relative;
+    /* z-index: -2; */
+}
+
+
+.star {
+    width: 20%;
+    background-color: transparent;
+    padding-bottom: 25%;
+    float: left;
+    /* border:1px solid #ffb703; */
+    z-index: 999;
+}
+
+
+.selected-stars-img {
+    z-index: -1;
+}
+
+#star1:hover ~ .selected-stars-img,
+#star1:target ~ .selected-stars-img {
+    width: 20%;
+    padding-bottom: 25%;
+    background:transparent url(five-star-sprite.png);
+    background-size: calc(500%/1) 200%;
+    position: absolute;
+}
+
+#star2:hover ~ .selected-stars-img,
+#star2:target ~ .selected-stars-img {
+    width: 40%;
+    padding-bottom: 25%;
+    background:transparent url(five-star-sprite.png);
+    background-size: calc(500%/2) 200%;
+    position: absolute;
+}
+
+#star3:hover ~ .selected-stars-img,
+#star3:target ~ .selected-stars-img {
+    width: 60%;
+    padding-bottom: 25%;
+    background:transparent url(five-star-sprite.png);
+    background-size: calc(500%/3) 200%;
+    position: absolute;
+}
+
+#star4:hover ~ .selected-stars-img,
+#star4:target ~ .selected-stars-img {
+    width: 80%;
+    padding-bottom: 25%;
+    background:transparent url(five-star-sprite.png);
+    background-size: calc(500%/4) 200%;
+    position: absolute;
+}
+
+#star5:hover ~ .selected-stars-img,
+#star5:target ~ .selected-stars-img {
+    width: 100%;
+    padding-bottom: 25%;
+    background:transparent url(five-star-sprite.png);
+    background-size: 100% 200%;
+    position: absolute;
+}

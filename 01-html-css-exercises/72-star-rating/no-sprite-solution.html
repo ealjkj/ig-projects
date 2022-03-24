@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9c9b66e460.js" crossorigin="anonymous"></script>
+    <title>Star rating system</title>
+    <link rel="stylesheet" href="./no-sprite-solution.css">
+</head>
+<body>
+    <header>
+        <h1 class="main-title"> Star rating system (Question 72).</h1>
+        <p>Create a star-rating system with hover using only HTML/CSS. No javascript.</p>
+        <ol>
+            <li>Use elements that are semantic compliant when possible.</li>
+            <li>Assume you have a sprite with 5 stars selected and 5 stars unselected.</li>
+            <li>The selection should persist</li>
+        </ol>
+    </header>
+    <main class="container">
+        <div class="first-solution">
+            <h2> Solution </h2>
+            <div class="solution-description">
+                <p> <strong>Description:</strong> We can nest the stars. Each nest is made out of one star and one star-nest, except the last nest which only contains a star. </p>
+                <p>
+                    When we hover a star-nest we turn all stars in the nest yellow (including childrens, granchildrens and so on).
+
+                    Also, every star that comes immediately after a nest will be gray.
+                </p>
+                <p><strong>Notes:</strong> Page is not responsive.</p> 
+            </div>
+            <div class="review-container">
+                <div class="object-to-review"></div>
+                <div class="rating">
+                    <div class="five-stars star-nest" id="five-stars">
+                        <div class="four-stars star-nest" id="four-stars">
+                            <div class="three-stars star-nest" id="three-stars">
+                                <div class="two-stars star-nest"  id="two-stars">
+                                    <div class="one-star star-nest" id="one-star">
+                                        <a href="#one-star" class="star"><i class="fa-solid fa-star"></i></a>
+                                    </div>
+                                    <a href="#two-stars" class="star"><i class="fa-solid fa-star"></i></a>
+                                </div>
+                                <a href="#three-stars" class="star"><i class="fa-solid fa-star"></i></a>
+                            </div>
+                            <a href="#four-stars" class="star"><i class="fa-solid fa-star"></i></a>
+                        </div>
+                        <a href="#five-stars" class="star"><i class="fa-solid fa-star"></i></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
