@@ -55,17 +55,24 @@ p {
     background-color: transparent;
     padding-bottom: 25%;
     float: left;
+    cursor: pointer;
     /* border:1px solid #ffb703; */
     z-index: 999;
 }
+.star:focus-visible {
+    outline: none;
+}
 
+.hidden-radio {
+    display: none;
+} 
 
 .selected-stars-img {
     z-index: -1;
 }
 
 #star1:hover ~ .selected-stars-img,
-#star1:target ~ .selected-stars-img {
+#star1-radio:checked ~ .selected-stars-img {
     width: 20%;
     padding-bottom: 25%;
     background:transparent url(five-star-sprite.png);
@@ -74,7 +81,7 @@ p {
 }
 
 #star2:hover ~ .selected-stars-img,
-#star2:target ~ .selected-stars-img {
+#star2-radio:checked ~ .selected-stars-img {
     width: 40%;
     padding-bottom: 25%;
     background:transparent url(five-star-sprite.png);
@@ -83,7 +90,7 @@ p {
 }
 
 #star3:hover ~ .selected-stars-img,
-#star3:target ~ .selected-stars-img {
+#star3-radio:checked ~ .selected-stars-img {
     width: 60%;
     padding-bottom: 25%;
     background:transparent url(five-star-sprite.png);
@@ -92,7 +99,7 @@ p {
 }
 
 #star4:hover ~ .selected-stars-img,
-#star4:target ~ .selected-stars-img {
+#star4-radio:checked ~ .selected-stars-img {
     width: 80%;
     padding-bottom: 25%;
     background:transparent url(five-star-sprite.png);
@@ -101,7 +108,7 @@ p {
 }
 
 #star5:hover ~ .selected-stars-img,
-#star5:target ~ .selected-stars-img {
+#star5-radio:checked ~ .selected-stars-img {
     width: 100%;
     padding-bottom: 25%;
     background:transparent url(five-star-sprite.png);

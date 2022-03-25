@@ -55,6 +55,7 @@ img {
     display: flex;
     justify-content: space-around;
 }
+
 .album-grid {
     width: 80vw;
     display: flex;
@@ -67,8 +68,25 @@ img {
     list-style-type: none;
     color: whitesmoke;
     border: 1px dotted red;
-    width: 24%;
+    width: 100%;
     max-height: 0;
-    padding-bottom: 24%;
+    padding-bottom: 100%;
     margin-bottom: 1%;
 }
+
+
+
+
+@media (min-width: 481px) {
+    .album-grid li {
+        width: 49%;
+        padding-bottom: 49%;
+    }
+  }
+
+@media (min-width: 769px) {    
+    .album-grid li {
+        width: 24%;
+        padding-bottom: 24%;
+    }
+  }

@@ -49,46 +49,6 @@ main {
 p {
     color: white;
 }
-
-
-/* Ckeckbox */
-.fa {
-    color: white;
-    line-height: 16px;
-    border-radius: 4px;
-  }
-  .drop-menu-checkbox {
-      display: none;
-  }
-  .fa-plus {
-    padding-top: 2px;
-    padding-right: 2px;
-    padding-left: 2px;
-    background-color: #2d3142;
-    position: absolute;
-    top: 5vh;
-    right: 0;
-    cursor: pointer;
-  }
-  .fa-minus {
-    padding-top: 1px;
-    padding-right: 2px;
-    padding-left: 2px;
-    background-color: #E85764;
-    display: none;
-    position: absolute;
-    top: 5vh;
-    right: 0;
-    cursor: pointer;
-  }
-
-  .drop-menu-checkbox:checked + .checkbox-label .fa-minus {
-    display: inline;
-  }
-  .drop-menu-checkbox:checked + .checkbox-label .fa-plus {
-    display: none;
-  }
-
   .option li:hover {
     transition:all ease-in-out 0.2s;
 }
@@ -101,12 +61,15 @@ p {
 /* General styling*/
 .menu {
     background-color: #dbc442;
+    width: 15vw;
+    height: 100vh;
 }
 .layout-box {
     position: absolute;
     width: 100vw;
     height: 100vh;
     background-color: #2d3142;
+    display: flex;
 }
 .menu li {
     cursor: pointer;
@@ -117,23 +80,20 @@ p {
     min-height: 10vh;
 }
 
-.option {
-    position: relative;
-}
-.drop-menu-checkbox {
-    position: absolute;
-    right: 0;
-    top: 5vh;
-}
 
 
 /* Dropdown menu*/
+
+.option {
+    position: relative;
+}
+
 .option ul {
     display: none;
 }
 
-.drop-menu-checkbox:checked ~ ul
-{   
+
+.option:hover ul{
     display: block;
 }
 
@@ -141,13 +101,7 @@ p {
     background-color: #a79321;
 }
 
-.layout-box .menu {
-    width: 15vw;
-    height: 100vh;
-}
-.layout-box{
-    display: flex;
-}
+
 
 /*Left --------------------------------*/
 #display-left-nav:target ~ .layout-box .menu {
@@ -157,6 +111,14 @@ p {
 #display-left-nav:target ~ .layout-box{
     display: flex;
 }
+
+#display-left-nav:target ~ .layout-box .option ul{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 15vw;
+}
+
 /*Center --------------------------------*/
 #display-center-nav:target ~ .layout-box .menu > ul {
     height: 100%;
@@ -187,14 +149,6 @@ p {
 #display-center-nav:target ~ .layout-box{
     display: block;
 }
-/* 
-#display-center-nav:target ~ .layout-box .option ul li:not(:nth-child(1)) {
-    float: left;
-    position:absolute;
-} 
-#display-center-nav:target ~ .layout-box .option ul:first-child {
-    background-color: #bfc0c0;
-}  */
 
 
 /*Right --------------------------------*/
@@ -209,10 +163,19 @@ p {
     justify-content: flex-end;
 }
 
+#display-right-nav:target ~ .layout-box .option ul{
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 15vw;
+}
 
 
+
+/* Multiple displays menu */
 main .multiple-displays {
     position: absolute;
     top: 50%;
     left: 50%;
 }
+
